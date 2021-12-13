@@ -27,7 +27,12 @@ export default function Home() {
       >
         <NoSignal />
         <WaveTextCSS />
-        <ButtonFancy className="pt-[300px] text-xl">Click Me</ButtonFancy>
+        <ButtonFancy
+          buttonClassName="tracking-widest uppercase text-md transition duration-500 ease-in-out"
+          className="pt-[300px]"
+        >
+          Click Me
+        </ButtonFancy>
       </main>
 
       <footer

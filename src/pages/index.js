@@ -6,6 +6,7 @@ import styles from '../styles/Home.module.css';
 import HamburgerMenu from '@/components/HamburgerMenu';
 import NoSignal from '@/components/NoSignal';
 import WaveTextCSS from '@/components/WaveTextCSS';
+import ButtonFancy from '@/components/ButtonFancy';
 
 const CursorCircle = dynamic(() => import('@/components/CursorCircle'), {
   ssr: false,
@@ -26,6 +27,7 @@ export default function Home() {
       >
         <NoSignal />
         <WaveTextCSS />
+        <ButtonFancy className="pt-[300px] text-xl">Click Me</ButtonFancy>
       </main>
 
       <footer
@@ -33,7 +35,7 @@ export default function Home() {
       >
         Powered by passion
       </footer>
-      <CursorCircle />
+      {/* <CursorCircle /> */}
     </div>
   );
 }

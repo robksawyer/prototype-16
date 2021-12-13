@@ -3,11 +3,9 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import styles from '../styles/Home.module.css';
 
-// const MainScene = dynamic(() => import('@/components/MainScene'), {
-//   ssr: false,
-// })
 import HamburgerMenu from '@/components/HamburgerMenu';
 import NoSignal from '@/components/NoSignal';
+import WaveTextCSS from '@/components/WaveTextCSS';
 
 const CursorCircle = dynamic(() => import('@/components/CursorCircle'), {
   ssr: false,
@@ -24,10 +22,10 @@ export default function Home() {
       </Head>
       <HamburgerMenu />
       <main
-        className={`${styles.main} flex flex-grow flex-col w-screen h-screen`}
+        className={`${styles.main} flex w-screen h-screen overflow-hidden absolute items-center justify-center`}
       >
-        {/* <MainScene /> */}
         <NoSignal />
+        <WaveTextCSS />
       </main>
 
       <footer

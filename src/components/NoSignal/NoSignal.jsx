@@ -1,5 +1,6 @@
 /**
  * @file NoSignal.js
+ * @see https://codepen.io/wheatup/pen/PgqwPy
  */
 import * as React from 'react';
 import PropTypes from 'prop-types';
@@ -112,8 +113,8 @@ class Canvas {
 }
 
 const NoSignal = ({
-  tagName: Tag = 'canvas',
-  className = '',
+  tagName: Tag = 'div',
+  className = 'absolute top-0 left-0 z-0 w-screen h-screen',
   variant = 'default',
   children = '',
 }) => {
@@ -140,7 +141,9 @@ const NoSignal = ({
       className={`${styles.no_signal} ${
         styles[`no_signal__${variant}`]
       } ${className}`}
-    />
+    >
+      <canvas />
+    </Tag>
   );
 };
 

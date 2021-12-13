@@ -69,6 +69,7 @@
     "postcss-preset-env": "^7.0.1",
     "prettier": "^2.4.1",
     "raw-loader": "^4.0.2",
+    "sass": "^1.45.0",
     "scaffolding-nextjs": "^2.1.14"
   },
   "browserslist": {

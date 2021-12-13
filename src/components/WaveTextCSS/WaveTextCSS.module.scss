@@ -1,0 +1,44 @@
+/**
+* waving.module.css
+*/
+.waving {
+    perspective: 1000px;
+    -moz-perspective: 1000px;
+    &>* {
+      display: inline-block;
+      font-size: 5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #fff;
+      transform-origin: top;
+      animation: waving 1s infinite ease-in-out;
+      animation-fill-mode: backwards;
+      
+      @for $i from 1 through 20 {
+        &:nth-child(#{$i}){
+          animation-delay: #{$i * 0.12}s;
+        }
+      }
+    }
+}
+
+.waving__default {
+
+}
+  
+@keyframes waving {
+0% {
+    transform: rotateX(30deg) translateY(0);
+    text-shadow: 0px 3px 0px #ccc, 0px 10px 10px rgba(0,0,0,.5);
+}
+
+50% {
+    transform: rotateX(45deg) translateY(-20px);
+    text-shadow: 0px 3px 0px #ccc, 0px 55px 20px rgba(0,0,0,.4);
+}
+
+100% {
+    transform: rotateX(30deg) translateY(0);
+    text-shadow: 0px 3px 0px #ccc, 0px 10px 10px rgba(0,0,0,.5);
+}
+}
